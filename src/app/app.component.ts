@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {NgModlService} from '../../projects/ng-modl/src/lib/ng-modl.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng-modl-project';
+
+  constructor(private modlService: NgModlService) {
+  }
+
+  openModl() {
+    this.modlService.alert('This is Alert');
+  }
+
 }
