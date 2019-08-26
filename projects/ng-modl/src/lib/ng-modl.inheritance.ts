@@ -1,5 +1,5 @@
 export interface OnNgModlInit {
-  ngModlInit?(): void;
+  ngModlInit(): void;
 }
 
 export abstract class NgModlComponent {

@@ -28,7 +28,7 @@ export class NgModlService {
     });
   }
 
-  dialog<T = any, R = any>(componentType: Type<T>, title: string, conf: NgModlOption): Promise<R> {
+  dialog<T = any, R = any>(componentType: Type<T>, title: string, conf: NgModlOption = {}): Promise<R> {
     return new Promise<R>(resolve => {
 
       const windowComponentRef = this.componentFactoryResolver.resolveComponentFactory(NgModlComponent).create(this.injector);

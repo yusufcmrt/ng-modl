@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
-import {NgModlService} from '../../projects/ng-modl/src/lib/ng-modl.service';
+import {NgModlService} from 'ng-modl';
+import {InputFormComponent} from './input-form/input-form.component';
 
 @Component({
   selector: 'app-root',
@@ -11,8 +12,16 @@ export class AppComponent {
   constructor(private modlService: NgModlService) {
   }
 
-  openModl() {
+  showAlert() {
     this.modlService.alert('This is Alert');
+  }
+
+  showConfirm() {
+    this.modlService.confirm('This is confirm');
+  }
+
+  showCustom() {
+    this.modlService.dialog(InputFormComponent, 'Custom Dialog');
   }
 
 }

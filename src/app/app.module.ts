@@ -1,12 +1,17 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import {NgModlModule} from '../../projects/ng-modl/src/lib/ng-modl.module';
+import {AppComponent} from './app.component';
+import {NgModlModule} from 'ng-modl';
+import {InputFormComponent} from './input-form/input-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InputFormComponent
+  ],
+  entryComponents: [
+    InputFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -15,4 +20,5 @@ import {NgModlModule} from '../../projects/ng-modl/src/lib/ng-modl.module';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
