@@ -12,7 +12,7 @@ export class NgModlService {
               private injector: Injector) {
   }
 
-  confirm(message: string, title: string = 'Dikkat'): Promise<boolean> {
+  confirm(message: string, title: string = 'Confirm'): Promise<boolean> {
     return this.dialog(NgModlConfirmComponent, title, {
       minWidth: '250px',
       maxWidth: '400px',
@@ -20,7 +20,7 @@ export class NgModlService {
     });
   }
 
-  alert(message: string, title: string = 'Uyarı'): Promise<boolean> {
+  alert(message: string, title: string = 'Alert'): Promise<boolean> {
     return this.dialog(NgModlConfirmComponent, title, {
       minWidth: '200px',
       maxWidth: '400px',
