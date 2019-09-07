@@ -3,7 +3,6 @@ import {NgModlComponent} from './ng-modl.component';
 import {NgModlDirective} from './ng-modl.directive';
 import {NgModlConfirmComponent} from './ng-modl-confirm/ng-modl-confirm.component';
 import {CommonModule} from '@angular/common';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgModlService} from './ng-modl.service';
 
 
@@ -23,8 +22,7 @@ import {NgModlService} from './ng-modl.service';
   providers: [
     NgModlService,
   ],
-  exports: [
-  ]
+  exports: []
 })
 export class NgModlModule {
 }
