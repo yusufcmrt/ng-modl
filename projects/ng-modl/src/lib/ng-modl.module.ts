@@ -10,7 +10,6 @@ import {NgModlService} from './ng-modl.service';
 @NgModule({
   imports: [
     CommonModule,
-    BrowserAnimationsModule,
   ],
   declarations: [
     NgModlComponent,
