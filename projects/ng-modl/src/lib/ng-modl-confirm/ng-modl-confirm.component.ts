@@ -6,8 +6,8 @@ import {NgModlComponent} from '../ng-modl.inheritance';
   template: `
     <p>{{message}}</p>
     <div>
-      <button class="ng-modl-close-btn" (click)="dismiss()" *ngIf="type !== 'alert'">Cancel</button>
-      <button class="ng-modl-success-btn" (click)="dismiss(true)">Okey</button>
+      <button class="ng-modl-cancel-btn" (click)="dismiss()" *ngIf="type !== 'alert'">Cancel</button>
+      <button class="ng-modl-okey-btn" (click)="dismiss(true)">Okey</button>
     </div>
   `,
 })
