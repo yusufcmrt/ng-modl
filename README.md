@@ -1,27 +1,62 @@
-# NgModlProject
+# NgModl
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.
+A simple Angular 8 dialog, with built-in solutions for features including:
+* Alert
+* Confirm
+* Custom Dialog Content
 
-## Development server
+## Installation
+```shell script
+npm install ng-modl
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Usage
+1. Import *BrowserAnimationsModule* and *NgModlModule*
+```typescript
+import {AppComponent} from './app.component';
+import {NgModule} from '@angular/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NgModlModule} from 'ng-modl';
 
-## Code scaffolding
+@NgModule({
+  imports: [
+  // ...
+  BrowserAnimationsModule,
+  NgModlModule,
+  // ...
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. Inject *NgModlService*
+```typescript
+import {Component} from '@angular/core';
+import {NgModlService} from 'ng-modl';
 
-## Build
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent {
+  constructor(private modlService: NgModlService) {
+  }
+}
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## API
+### NgModlOption
+* `width` (`number` | default: ) set dialog width
+* `height` (`number` | default: ) set dialog height
+* `minWidth` (`number` | default: ) set dialog minWidth
+* `minHeight` (`number` | default: ) set dialog minHeight
+* `maxWidth` (`number` | default: ) set dialog maxWidth
+* `maxHeight` (`number` | default: ) set dialog maxHeight
+* `inputs` (`{[field: string]: any}` | default: ) set inputs
+* `outputs` (`{[field: string]: $event => any}` | default: ) handle output events
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Usage and Sample
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
