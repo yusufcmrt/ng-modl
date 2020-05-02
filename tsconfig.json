@@ -20,10 +20,12 @@
     ],
     "paths": {
       "ng-modl": [
-        "dist/ng-modl"
+        "dist/ng-modl",
+        "projects/ng-modl/src/public-api.ts"
       ],
       "ng-modl/*": [
-        "dist/ng-modl/*"
+        "dist/ng-modl/*",
+        "projects/ng-modl/src/lib/*"
       ]
     }
   },
