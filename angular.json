@@ -161,5 +161,8 @@
       }
     }
   },
-  "defaultProject": "ng-modl-project"
+  "defaultProject": "ng-modl-project",
+  "cli": {
+    "packageManager": "yarn"
+  }
 }
