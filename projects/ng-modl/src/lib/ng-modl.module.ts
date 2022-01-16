@@ -7,22 +7,18 @@ import {NgModlService} from './ng-modl.service';
 
 
 @NgModule({
-  imports: [
-    CommonModule,
-  ],
-  declarations: [
-    NgModlComponent,
-    NgModlDirective,
-    NgModlConfirmComponent,
-  ],
-  entryComponents: [
-    NgModlComponent,
-    NgModlConfirmComponent,
-  ],
-  providers: [
-    NgModlService,
-  ],
-  exports: []
+    imports: [
+        CommonModule,
+    ],
+    declarations: [
+        NgModlComponent,
+        NgModlDirective,
+        NgModlConfirmComponent,
+    ],
+    providers: [
+        NgModlService,
+    ],
+    exports: []
 })
 export class NgModlModule {
 }

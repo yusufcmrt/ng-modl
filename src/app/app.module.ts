@@ -7,20 +7,17 @@ import {InputFormComponent} from './input-form/input-form.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    NgModlModule,
-    BrowserAnimationsModule,
-  ],
-  declarations: [
-    AppComponent,
-    InputFormComponent
-  ],
-  entryComponents: [
-    InputFormComponent,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    imports: [
+        BrowserModule,
+        NgModlModule,
+        BrowserAnimationsModule,
+    ],
+    declarations: [
+        AppComponent,
+        InputFormComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }
